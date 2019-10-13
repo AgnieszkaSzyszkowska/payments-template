@@ -1,0 +1,14 @@
+{
+  "amount" : 10.5,
+  "sender" : "+48111111111",
+  "to" : "+48111111112",
+  "timestamp" : "2019-10-13T13:06:22Z",
+  "valid": true
+}
+{
+  "firstname" : "Agnieszka",
+  "lastname" : "Szyszkowska",
+  "phoneNumber" : "+48111111111",
+  "email" : "aszyszkowska@gmail.com",
+  "balance" : 0
+}

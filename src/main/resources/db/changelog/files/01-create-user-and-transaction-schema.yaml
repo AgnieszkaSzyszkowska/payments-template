@@ -1,0 +1,91 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: agnieszka
+      changes:
+        - createTable:
+            tableName: User
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: firstname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: lastname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone_number
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(80)
+              - column:
+                  name: balance
+                  type: decimal(10,2)
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: Transaction
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: sender
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: receiver
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: amount
+                  type: decimal(10,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: timestamp
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: valid
+                  type: boolean
+                  constraints:
+                    nullable: false
+        - createSequence:
+            catalogName: user
+            cycle: true
+            incrementBy: 1
+            ordered: true
+            schemaName: public
+            sequenceName: user_id
+            startValue: 1000
+            minValue: 1000
+        - createSequence:
+            catalogName: transaction
+            cycle: true
+            incrementBy: 1
+            ordered: true
+            schemaName: public
+            sequenceName: transaction_id
+            startValue: 1000
+            minValue: 1000

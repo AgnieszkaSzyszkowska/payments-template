@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: files/01-create-user-and-transaction-schema.yaml
+      relativeToChangelogFile: true
